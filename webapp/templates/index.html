@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-<a href="add-task/">Create article</a>
+<a href="add-task/">Create task</a>
 <div class="articles">
-    {% for article in articles %}
+    {% for task in tasks %}
     <div class="article">
         <a href="article/?id={{task.id}}"><h1>{{task.description}}</h1></a>
 {#        <p>{{task.compelet_date}}</p>#}
