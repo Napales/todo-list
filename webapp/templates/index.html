@@ -14,9 +14,10 @@
 <a href="add-task/">Create task</a>
 <div class="articles">
     {% for task in tasks %}
-    <div class="article">
+    <div>
         <h1>{{task.description}}</h1>
-{#        <p>{{task.compelet_date}}</p>#}
+        <p>{{task.status}}</p>
+        <p>{{task.compelet_date}}</p>
         <hr/>
     </div>
 

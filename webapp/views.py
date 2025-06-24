@@ -13,7 +13,7 @@ def create_task(request):
     if request.method == "POST":
         description = request.POST.get("description")
         status = request.POST.get("status")
-        compelet_date = request.POST.get("complet_date")
+        compelet_date = request.POST.get("compelet_date")
         Task.objects.create(description=description, status=status, compelet_date=compelet_date)
         return HttpResponseRedirect("/")
     else:
