@@ -9,7 +9,7 @@ class Task(models.Model):
 
 
     def __str__(self):
-        return f"{self.description}{self.id}"
+        return f"{self.id} | {self.description} "
 
     class Meta:
         db_table = 'tasks'
