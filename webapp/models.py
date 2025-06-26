@@ -6,6 +6,7 @@ class Task(models.Model):
     description = models.TextField(verbose_name='Описание', null=False, blank=False)
     status = models.CharField(max_length=20, verbose_name='Статус', choices=status_choices, default='new')
     compelet_date = models.DateField(verbose_name='Дата выполнения', null=True, blank=True)
+    detail_description = models.TextField(verbose_name='Подробное описание', null=True, blank=True)
 
 
     def __str__(self):
