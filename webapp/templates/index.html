@@ -1,21 +1,11 @@
-{% load static %}
+{% extends 'base.html' %}
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
+{% block content %}
 <a href="add-task/">Create task</a>
 <div class="articles">
     {% for task in tasks %}
     <div>
-        <h1>{{task.description}}</h1>
+        <a href="{% url 'detail_task' task.pk %}"><h1>{{task.description}}</h1></a>
         <p class="desc">{{task.status}}</p>
         <p>{{task.compelet_date}}</p>
         <hr/>
@@ -25,5 +15,4 @@
     <p>No task</p>
     {% endfor %}
 </div>
-</body>
-</html>
+{% endblock %}
