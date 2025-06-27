@@ -21,7 +21,7 @@ def create_task(request):
     else:
         return render(request, 'create_task.html', {'status_choices': status_choices})
 
+
 def detail_task(request, pk):
     task = get_object_or_404(Task, pk=pk)
     return render(request, 'task_detail.html', {'task': task})
-

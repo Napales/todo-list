@@ -4,26 +4,26 @@
 {% endblock %}
 
 {% block content %}
-<h1>Create Task</h1>
-<form action="{% url 'add-task' %}" method="post">
-    {% csrf_token %}
-    <label>Description:</label><br/>
-    <input type="text" name="description"/><br/>
+    <h1>Create Task</h1>
+    <form action="{% url 'add-task' %}" method="post">
+        {% csrf_token %}
+        <label>Description:</label><br/>
+        <input type="text" name="description"/><br/>
 
-    <label>Status:</label><br/>
-    <select name="status">
-        {% for status in status_choices %}
-            <option value="{{status.0}}">{{status.1}}</option>
-        {% endfor %}
-    </select> <br/>
+        <label>Status:</label><br/>
+        <select name="status">
+            {% for status in status_choices %}
+                <option value="{{ status.0 }}">{{ status.1 }}</option>
+            {% endfor %}
+        </select> <br/>
 
-    <label>Date completed:</label><br/>
-    <input type='date' name="compelet_date"/><br/>
-    <br/>
+        <label>Date completed:</label><br/>
+        <input type='date' name="compelet_date"/><br/>
+        <br/>
 
-    <label>Detail description</label><br/>
-    <textarea name="detail_description"></textarea><br/>
-    <br/>
-    <input type="submit" value="Send"/>
-</form>
+        <label>Detail description</label><br/>
+        <textarea name="detail_description"></textarea><br/>
+        <br/>
+        <input type="submit" value="Send"/>
+    </form>
 {% endblock %}
