@@ -1,6 +1,7 @@
 
 from django.shortcuts import render, redirect, get_object_or_404
 
+from webapp.forms import TaskForm
 from webapp.models import Task, status_choices
 
 
@@ -11,15 +12,15 @@ def index(request):
 
 def create_task(request):
     if request.method == "POST":
-        description = request.POST.get("description")
-        status = request.POST.get("status")
-        compelet_date = request.POST.get("compelet_date")
-        detail_description = request.POST.get("detail_description")
-        Task.objects.create(description=description, status=status, compelet_date=compelet_date,
-                            detail_description=detail_description)
-        return redirect('index')
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            task = form.save()
+            return redirect('index')
+        else:
+            return render(request, 'create_task.html', {'status_choices': status_choices, 'form': form})
     else:
-        return render(request, 'create_task.html', {'status_choices': status_choices})
+        form = TaskForm()
+        return render(request, 'create_task.html', {'status_choices': status_choices, 'form': form})
 
 
 def delete_task(request, pk):
@@ -38,14 +39,13 @@ def detail_task(request, pk):
 def update_task(request, pk):
     task = get_object_or_404(Task, pk=pk)
     if request.method == "POST":
-        task.description = request.POST.get("description")
-        task.status = request.POST.get("status")
-        task.compelet_date = request.POST.get("compelet_date")
-        task.detail_description = request.POST.get("detail_description")
-        task.save()
-        return redirect('index')
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            task = form.save()
+            return redirect('index')
+        else:
+            return render(request, 'update_task.html', {"form": form})
     else:
-        return render(request, 'update_task.html', {'status_choices': status_choices, 'task': task})
-
-
+        form = TaskForm(instance=task)
+        return render (request, 'update_task.html', {"form": form, "task": task })
 
