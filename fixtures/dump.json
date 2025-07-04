@@ -5,7 +5,7 @@
   "fields": {
     "description": "Помыть посуду",
     "status": "new",
-    "compelet_date": "2025-06-10",
+    "complete_date": "2025-06-10",
     "detail_description": "Собрать всю грязную посуду дома и помыть ее"
   }
 },
@@ -15,7 +15,7 @@
   "fields": {
     "description": "Поесть",
     "status": "new",
-    "compelet_date": null,
+    "complete_date": null,
     "detail_description": "Приготовить курочку себе "
   }
 },
@@ -25,7 +25,7 @@
   "fields": {
     "description": "Сделать уроки",
     "status": "new",
-    "compelet_date": "2025-06-24",
+    "complete_date": "2025-06-24",
     "detail_description": "Сделать математику, историю, прочитать 523 стрнаницу"
   }
 },
@@ -35,7 +35,7 @@
   "fields": {
     "description": "Сходить в универ",
     "status": "in_progress",
-    "compelet_date": "2025-06-04",
+    "complete_date": "2025-06-04",
     "detail_description": "В 13 00 начало пар, подходить в 10 кабинет"
   }
 },
@@ -45,7 +45,7 @@
   "fields": {
     "description": "Убраться дома",
     "status": "done",
-    "compelet_date": "2025-06-23",
+    "complete_date": "2025-06-23",
     "detail_description": "Заправить кровать, пропылесосить"
   }
 },
@@ -55,7 +55,7 @@
   "fields": {
     "description": "Сделать ДЗ",
     "status": "in_progress",
-    "compelet_date": "2025-06-26",
+    "complete_date": "2025-06-26",
     "detail_description": "Сделать ДЗ по курсам"
   }
 },
@@ -65,7 +65,7 @@
   "fields": {
     "description": "12312",
     "status": "new",
-    "compelet_date": "2025-05-30",
+    "complete_date": "2025-05-30",
     "detail_description": "1232131"
   }
 }
