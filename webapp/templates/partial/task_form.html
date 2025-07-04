@@ -1,0 +1,18 @@
+{% csrf_token %}
+<label>Description:</label><br/>
+<input type="text" value="{{ task.description }}" name="description"/><br/>
+
+<label>Status:</label><br/>
+<select name="status">
+    {% for status in status_choices %}
+        <option value="{{ status.0 }}">{{ status.1 }}</option>
+    {% endfor %}
+</select> <br/>
+
+<label>Date completed:</label><br/>
+<input type='date' value="{{ task.compelet_date }}" name="compelet_date"/><br/>
+<br/>
+
+<label>Detail description</label><br/>
+<textarea name="detail_description">{{ task.detail_description }}</textarea><br/>
+<br/>
