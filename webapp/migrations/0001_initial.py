@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('description', models.TextField(verbose_name='Описание')),
                 ('status', models.CharField(choices=[('new', 'Новая'), ('in_progress', 'В процессе'), ('done', 'Сделано')], default='new', max_length=20, verbose_name='Статус')),
-                ('complete_date', models.DateField(blank=True, null=True, verbose_name='Дата выполнения')),
+                ('compelet_date', models.DateField(blank=True, null=True, verbose_name='Дата выполнения')),
             ],
             options={
                 'db_table': 'tasks',

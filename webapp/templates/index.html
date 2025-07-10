@@ -9,7 +9,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ task.description }}</h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary">{{ task.status }}</h6>
-                        <p class="card-text">{{ task.compelet_date }}</p>
+                        <p class="card-text">{{ task.complete_date }}</p>
                         <a href="{% url 'detail_task' task.pk %}" class="btn btn-outline-primary">Detail</a>
                         <a href="{% url 'update_task' task.pk %}" class="btn btn-outline-success">Update</a>
                         <a href="{% url 'delete_task' task.pk %}" class="btn btn-outline-danger">Delete</a>

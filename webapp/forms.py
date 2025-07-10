@@ -13,7 +13,7 @@ class TaskForm(forms.ModelForm):
 
     class Meta:
         model = Task
-        fields = ['description', 'status', 'compelet_date', 'detail_description']
+        fields = ['description', 'status', 'complete_date', 'detail_description']
         widgets = {
-            "compelet_date": widgets.DateTimeInput(attrs={'type': 'datetime-local'})
+            "complete_date": widgets.DateInput(attrs={'type': 'date'})
         }

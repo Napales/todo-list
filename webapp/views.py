@@ -6,7 +6,7 @@ from webapp.models import Task, status_choices
 
 
 def index(request):
-    tasks = Task.objects.order_by('-compelet_date')
+    tasks = Task.objects.order_by('-complete_date')
     return render(request, 'index.html', {"tasks": tasks})
 
 
@@ -39,12 +39,12 @@ def detail_task(request, pk):
 def update_task(request, pk):
     task = get_object_or_404(Task, pk=pk)
     if request.method == "POST":
-        form = TaskForm(request.POST)
+        form = TaskForm(request.POST, instance=task)
         if form.is_valid():
-            task = form.save()
+            form.save()
             return redirect('index')
         else:
-            return render(request, 'update_task.html', {"form": form})
+            return render(request, 'update_task.html', {"form": form, "task": task})
     else:
         form = TaskForm(instance=task)
         return render (request, 'update_task.html', {"form": form, "task": task })
