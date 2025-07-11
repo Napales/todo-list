@@ -1,6 +1,5 @@
 from django.db import models
 
-status_choices = [('new', 'Новая'), ('in_progress', 'В процессе'),  ('done', 'Сделано')]
 
 class Type(models.Model):
     name = models.CharField(max_length=30, verbose_name='Тип', null=False, blank=False, unique=True)

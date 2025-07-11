@@ -3,8 +3,9 @@
 {% block content %}
     <div>
         <p>Задание - {{ task.description }}</p>
-        <p>Статус - {{ task.status }}</p>
-        <p>Дата - {{ task.created_at }}</p>
         <p>Подробное описание - {{ task.detail_description }}</p>
+        <p>Статус - {{ task.status.name }}</p>
+        <p>Тип - {{ task.type.name }}</p>
+        <p>Дата - {{ task.created_at }}</p>
     </div>
 {% endblock %}
