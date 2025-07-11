@@ -5,7 +5,11 @@
         <p>Задание - {{ task.description }}</p>
         <p>Подробное описание - {{ task.detail_description }}</p>
         <p>Статус - {{ task.status.name }}</p>
-        <p>Тип - {{ task.type.name }}</p>
         <p>Дата - {{ task.created_at }}</p>
+        <p>Тип -
+            {% for type in task.type.all %}
+                {{ type.name }}{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+        </p>
     </div>
 {% endblock %}

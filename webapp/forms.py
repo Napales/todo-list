@@ -5,7 +5,8 @@ from webapp.models import Task, Type, Status
 
 
 class TaskForm(forms.ModelForm):
-    type = forms.ModelChoiceField(queryset=Type.objects.all())
+    type = forms.ModelMultipleChoiceField(queryset=Type.objects.all(),
+                                          widget=forms.SelectMultiple(attrs={'class': 'form-control'}))
     status = forms.ModelChoiceField(queryset=Status.objects.all())
 
     def __init__(self, *args, **kwargs):
