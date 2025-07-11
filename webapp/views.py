@@ -6,7 +6,7 @@ from webapp.models import Task, status_choices
 
 
 def index(request):
-    tasks = Task.objects.order_by('-complete_date')
+    tasks = Task.objects.order_by('-created_at')
     return render(request, 'index.html', {"tasks": tasks})
 
 

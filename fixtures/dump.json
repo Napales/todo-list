@@ -1,72 +1,128 @@
 [
 {
-  "model": "webapp.task",
+  "model": "webapp.type",
   "pk": 1,
   "fields": {
-    "description": "РџРѕРјС‹С‚СЊ РїРѕСЃСѓРґСѓ",
-    "status": "new",
-    "complete_date": "2025-06-10",
-    "detail_description": "РЎРѕР±СЂР°С‚СЊ РІСЃСЋ РіСЂСЏР·РЅСѓСЋ РїРѕСЃСѓРґСѓ РґРѕРјР° Рё РїРѕРјС‹С‚СЊ РµРµ"
+    "name": "Task"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 2,
+  "fields": {
+    "name": "Bug"
+  }
+},
+{
+  "model": "webapp.type",
+  "pk": 3,
+  "fields": {
+    "name": "Enhancement"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 1,
+  "fields": {
+    "name": "New"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 2,
+  "fields": {
+    "name": "In Progress"
+  }
+},
+{
+  "model": "webapp.status",
+  "pk": 3,
+  "fields": {
+    "name": "Done"
   }
 },
 {
   "model": "webapp.task",
-  "pk": 7,
+  "pk": 20,
   "fields": {
-    "description": "РџРѕРµСЃС‚СЊ",
-    "status": "new",
-    "complete_date": null,
-    "detail_description": "РџСЂРёРіРѕС‚РѕРІРёС‚СЊ РєСѓСЂРѕС‡РєСѓ СЃРµР±Рµ "
+    "description": "Сделать ДЗ",
+    "detail_description": "Нужно открыть там и дкдаещ-пепльиеклмевм",
+    "created_at": "2025-07-11T07:47:07.848Z",
+    "updated_at": "2025-07-11T07:47:07.848Z",
+    "type": 1,
+    "status": 1
   }
 },
 {
   "model": "webapp.task",
-  "pk": 8,
+  "pk": 21,
   "fields": {
-    "description": "РЎРґРµР»Р°С‚СЊ СѓСЂРѕРєРё",
-    "status": "new",
-    "complete_date": "2025-06-24",
-    "detail_description": "РЎРґРµР»Р°С‚СЊ РјР°С‚РµРјР°С‚РёРєСѓ, РёСЃС‚РѕСЂРёСЋ, РїСЂРѕС‡РёС‚Р°С‚СЊ 523 СЃС‚СЂРЅР°РЅРёС†Сѓ"
+    "description": "Поесть",
+    "detail_description": "Там та там та каепепеакк",
+    "created_at": "2025-07-11T07:47:32.941Z",
+    "updated_at": "2025-07-11T07:47:32.941Z",
+    "type": 1,
+    "status": 2
   }
 },
 {
   "model": "webapp.task",
-  "pk": 9,
+  "pk": 22,
   "fields": {
-    "description": "РЎС…РѕРґРёС‚СЊ РІ СѓРЅРёРІРµСЂ",
-    "status": "in_progress",
-    "complete_date": "2025-06-04",
-    "detail_description": "Р’ 13 00 РЅР°С‡Р°Р»Рѕ РїР°СЂ, РїРѕРґС…РѕРґРёС‚СЊ РІ 10 РєР°Р±РёРЅРµС‚"
+    "description": "Изменить модель",
+    "detail_description": "Там та там то не работае и нуэно то то то то",
+    "created_at": "2025-07-11T07:47:53.553Z",
+    "updated_at": "2025-07-11T07:47:53.553Z",
+    "type": 3,
+    "status": 1
   }
 },
 {
   "model": "webapp.task",
-  "pk": 10,
+  "pk": 23,
   "fields": {
-    "description": "РЈР±СЂР°С‚СЊСЃСЏ РґРѕРјР°",
-    "status": "done",
-    "complete_date": "2025-06-23",
-    "detail_description": "Р—Р°РїСЂР°РІРёС‚СЊ РєСЂРѕРІР°С‚СЊ, РїСЂРѕРїС‹Р»РµСЃРѕСЃРёС‚СЊ"
+    "description": "Тренировка",
+    "detail_description": "сделать тренировку",
+    "created_at": "2025-07-11T07:48:48.974Z",
+    "updated_at": "2025-07-11T07:48:48.974Z",
+    "type": 1,
+    "status": 3
   }
 },
 {
   "model": "webapp.task",
-  "pk": 11,
+  "pk": 24,
   "fields": {
-    "description": "РЎРґРµР»Р°С‚СЊ Р”Р—",
-    "status": "in_progress",
-    "complete_date": "2025-06-26",
-    "detail_description": "РЎРґРµР»Р°С‚СЊ Р”Р— РїРѕ РєСѓСЂСЃР°Рј"
+    "description": "Багается при открытие",
+    "detail_description": "там то там то баг",
+    "created_at": "2025-07-11T07:49:03.206Z",
+    "updated_at": "2025-07-11T07:49:03.206Z",
+    "type": 2,
+    "status": 2
   }
 },
 {
   "model": "webapp.task",
-  "pk": 12,
+  "pk": 25,
   "fields": {
-    "description": "12312",
-    "status": "new",
-    "complete_date": "2025-05-30",
-    "detail_description": "1232131"
+    "description": "Сдать работу",
+    "detail_description": "ту работу нужно туда туда сюда отдать",
+    "created_at": "2025-07-11T07:49:26.417Z",
+    "updated_at": "2025-07-11T07:49:26.417Z",
+    "type": 1,
+    "status": 2
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 26,
+  "fields": {
+    "description": "Исправить вывод",
+    "detail_description": "амамеиепе",
+    "created_at": "2025-07-11T07:49:46.779Z",
+    "updated_at": "2025-07-11T07:49:46.779Z",
+    "type": 2,
+    "status": 3
   }
 }
 ]
