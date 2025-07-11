@@ -1,10 +1,13 @@
 from django import forms
 from django.forms import widgets
 
-from webapp.models import Task
+from webapp.models import Task, Type, Status
 
 
 class TaskForm(forms.ModelForm):
+    type = forms.ModelMultipleChoiceField(queryset=Type.objects.all(),
+                                          widget=forms.SelectMultiple(attrs={'class': 'form-control'}))
+    status = forms.ModelChoiceField(queryset=Status.objects.all())
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -13,7 +16,4 @@ class TaskForm(forms.ModelForm):
 
     class Meta:
         model = Task
-        fields = ['description', 'status', 'compelet_date', 'detail_description']
-        widgets = {
-            "compelet_date": widgets.DateTimeInput(attrs={'type': 'datetime-local'})
-        }
+        fields = ['description', 'detail_description', 'status', 'type']
