@@ -49,8 +49,8 @@
     "detail_description": "Нужно открыть там и дкдаещ-пепльиеклмевм",
     "created_at": "2025-07-11T07:47:07.848Z",
     "updated_at": "2025-07-11T07:47:07.848Z",
-    "type": 1,
-    "status": 1
+    "status": 1,
+    "type": []
   }
 },
 {
@@ -61,8 +61,8 @@
     "detail_description": "Там та там та каепепеакк",
     "created_at": "2025-07-11T07:47:32.941Z",
     "updated_at": "2025-07-11T07:47:32.941Z",
-    "type": 1,
-    "status": 2
+    "status": 2,
+    "type": []
   }
 },
 {
@@ -73,8 +73,8 @@
     "detail_description": "Там та там то не работае и нуэно то то то то",
     "created_at": "2025-07-11T07:47:53.553Z",
     "updated_at": "2025-07-11T07:47:53.553Z",
-    "type": 3,
-    "status": 1
+    "status": 1,
+    "type": []
   }
 },
 {
@@ -84,9 +84,12 @@
     "description": "Тренировка",
     "detail_description": "сделать тренировку",
     "created_at": "2025-07-11T07:48:48.974Z",
-    "updated_at": "2025-07-11T07:48:48.974Z",
-    "type": 1,
-    "status": 3
+    "updated_at": "2025-07-11T11:35:55.295Z",
+    "status": 3,
+    "type": [
+      1,
+      2
+    ]
   }
 },
 {
@@ -96,9 +99,11 @@
     "description": "Багается при открытие",
     "detail_description": "там то там то баг",
     "created_at": "2025-07-11T07:49:03.206Z",
-    "updated_at": "2025-07-11T07:49:03.206Z",
-    "type": 2,
-    "status": 2
+    "updated_at": "2025-07-11T11:35:51.492Z",
+    "status": 2,
+    "type": [
+      3
+    ]
   }
 },
 {
@@ -108,9 +113,13 @@
     "description": "Сдать работу",
     "detail_description": "ту работу нужно туда туда сюда отдать",
     "created_at": "2025-07-11T07:49:26.417Z",
-    "updated_at": "2025-07-11T07:49:26.417Z",
-    "type": 1,
-    "status": 2
+    "updated_at": "2025-07-11T11:35:47.441Z",
+    "status": 2,
+    "type": [
+      1,
+      2,
+      3
+    ]
   }
 },
 {
@@ -120,9 +129,40 @@
     "description": "Исправить вывод",
     "detail_description": "амамеиепе",
     "created_at": "2025-07-11T07:49:46.779Z",
-    "updated_at": "2025-07-11T07:49:46.779Z",
-    "type": 2,
-    "status": 3
+    "updated_at": "2025-07-11T11:34:06.142Z",
+    "status": 3,
+    "type": [
+      3
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 27,
+  "fields": {
+    "description": "rgrgtgtgfrfgr",
+    "detail_description": "gretgtrvfdffregr",
+    "created_at": "2025-07-11T08:01:15.368Z",
+    "updated_at": "2025-07-11T11:33:50.727Z",
+    "status": 1,
+    "type": [
+      2
+    ]
+  }
+},
+{
+  "model": "webapp.task",
+  "pk": 28,
+  "fields": {
+    "description": "tedt стало таким",
+    "detail_description": "frrtdevergregrt аалалалалала",
+    "created_at": "2025-07-11T08:05:13.939Z",
+    "updated_at": "2025-07-11T11:20:36.022Z",
+    "status": 2,
+    "type": [
+      1,
+      2
+    ]
   }
 }
 ]
