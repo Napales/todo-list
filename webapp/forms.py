@@ -20,3 +20,16 @@ class TaskForm(forms.ModelForm):
         widgets = {
             'type' : forms.CheckboxSelectMultiple(),
         }
+
+    def clean_detail_description(self):
+        detail_description = self.cleaned_data['detail_description']
+        if len(detail_description) < 10:
+            raise forms.ValidationError('Подробное описание не может быть таким маленьким')
+        return detail_description
+
+    def clean(self):
+        detail_description = self.cleaned_data.get('detail_description')
+        description = self.cleaned_data.get('description')
+        if description == detail_description:
+            raise forms.ValidationError('Название и контент не могут быть одинаковыми')
+        return self.cleaned_data
