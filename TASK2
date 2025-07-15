@@ -1,0 +1,3 @@
+1 - Task.objects.filter(Q(created_at__gt=timezone.now()-timedelta(days=30)) & Q(status__name='Done'))
+2 - Task.objects.filter(Q(status__name__in=['New','In Progress']) & Q(type__name__in=['Enhancement', 'Task']))
+3 - Task.objects.filter(~Q(status__name='Done') & (Q(description__iexact='bug') | Q(type__name='Bug')))
