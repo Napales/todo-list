@@ -9,7 +9,7 @@ class Task(models.Model):
     status = models.ForeignKey('webapp.Status', verbose_name='Статус', related_name='status_tasks',
                                on_delete=models.RESTRICT, null=True, blank=True)
     project = models.ForeignKey('webapp.Project', verbose_name='Проект', related_name='project_tasks'
-                                ,on_delete=models.RESTRICT, null=True, blank=True, )
+                                ,on_delete=models.RESTRICT, null=False, blank=False, )
 
 
     def __str__(self):
