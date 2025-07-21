@@ -24,8 +24,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 {% block nav %}
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'add-task' %}">Create task</a>
+{#                    <li class="nav-item">#}
+{#                        <a class="nav-link active" aria-current="page" href="{% url 'add-task' %}">Create task</a>#}
+{#                    </li>#}
+                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'project_add' %}">Create project</a>
                     </li>
                 {% endblock %}
             </ul>

@@ -1,9 +1,11 @@
 from urllib.parse import urlencode
 
 from django.db.models import Q
-from django.views.generic import ListView, DetailView
+from django.urls import reverse_lazy
+from django.views.generic import ListView, DetailView, CreateView
 
 from webapp.forms import SearchForm
+from webapp.forms.projects import ProjectForm
 from webapp.models import Project
 
 
@@ -40,8 +42,18 @@ class ProjectsListView(ListView):
             return self.form.cleaned_data['search']
 
 
+
+
 class ProjectDetailView(DetailView):
     template_name = 'projects/project_detail.html'
     model = Project
     context_object_name = 'project'
+
+
+class ProjectCreateView(CreateView):
+    template_name = 'projects/project_create.html'
+    model = Project
+    form_class = ProjectForm
+    success_url = reverse_lazy('project_list')
+
 
