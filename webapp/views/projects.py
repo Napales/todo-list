@@ -43,5 +43,5 @@ class ProjectsListView(ListView):
 class ProjectDetailView(DetailView):
     template_name = 'projects/project_detail.html'
     model = Project
-    context_object_name = 'projects'
+    context_object_name = 'project'
 
