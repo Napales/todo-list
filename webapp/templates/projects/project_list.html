@@ -6,9 +6,9 @@
         <div class="text-center mt-4 border-bottom border-primary border-3 mb-4">
             <h1>Projects</h1>
         </div>
-    <div class="mb-3">
-    {% include 'partial/simole_search.html' with form=search_form %}
-    </div>
+        <div class="mb-3">
+            {% include 'partial/simole_search.html' with form=search_form %}
+        </div>
         {% for project in projects %}
             <div class="col-12 col-md-4 mb-3">
                 <div class="card" style="width: 18rem;">
@@ -22,8 +22,10 @@
                 </div>
             </div>
         {% empty %}
-            <p>No project</p>
-            <p>You can create the first project</p>
+            <div class="text-center mt-5">
+                <p>No project</p>
+                <p>You can create a project with this name</p>
+            </div>
         {% endfor %}
     </div>
     {% if is_paginated %}

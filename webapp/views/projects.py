@@ -14,6 +14,7 @@ class ProjectsListView(ListView):
     model = Project
     context_object_name = 'projects'
     paginate_by = 5
+    ordering = ['id']
 
     def dispatch(self, request, *args, **kwargs):
         self.form = self.get_search_form()
