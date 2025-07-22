@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+
 
 class Project(models.Model):
     name = models.CharField(max_length=30, verbose_name='Название', null=False, blank=False)
@@ -13,3 +15,6 @@ class Project(models.Model):
         db_table = 'projects'
         verbose_name = 'Проект'
         verbose_name_plural = 'Проекты'
+
+    def get_absolute_url(self):
+        return reverse('project_detail', kwargs={'pk': self.pk})
