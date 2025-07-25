@@ -5,7 +5,7 @@
 
 {% block content %}
     <h1>Update Project</h1>
-    <form action="{% url 'project_update' project.pk %}" method="post">
+    <form action="{% url 'webapp:project_update' project.pk %}" method="post">
         {% include 'partial/task_form.html' %}
         <input class="btn btn-outline-success" type="submit" value="Create"/>
     </form>

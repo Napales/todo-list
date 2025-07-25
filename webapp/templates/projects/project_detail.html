@@ -2,10 +2,10 @@
 
 {% block nav %}
     <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="{% url 'project_add' %}">Create project</a>
+        <a class="nav-link active" aria-current="page" href="{% url 'webapp:project_add' %}">Create project</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="{% url 'task_add' project.pk %}">Create task</a>
+        <a class="nav-link active" aria-current="page" href="{% url 'webapp:task_add' project.pk %}">Create task</a>
     </li>
 {% endblock %}
 
@@ -29,9 +29,9 @@
                             <h5 class="card-title">{{ task.description }}</h5>
                             <h6 class="card-subtitle mb-2 text-body-secondary">{{ task.status.name }}</h6>
                             <p class="card-text">{{ task.created_at }}</p>
-                            <a href="{% url 'task_detail' task.pk %}" class="btn btn-outline-primary">Detail</a>
-                            <a href="{% url 'task_update' task.pk %}" class="btn btn-outline-success">Update</a>
-                            <a href="{% url 'task_delete' task.pk %}" class="btn btn-outline-danger">Delete</a>
+                            <a href="{% url 'webapp:task_detail' task.pk %}" class="btn btn-outline-primary">Detail</a>
+                            <a href="{% url 'webapp:task_update' task.pk %}" class="btn btn-outline-success">Update</a>
+                            <a href="{% url 'webapp:task_delete' task.pk %}" class="btn btn-outline-danger">Delete</a>
                         </div>
                     </div>
                 </div>

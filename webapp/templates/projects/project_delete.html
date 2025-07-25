@@ -4,10 +4,10 @@
     <div class="text-center mt-4">
         <h1>Delete Project</h1>
         <p>Are you sure you want to delete this task?</p>
-        <form action="{% url 'project_delete' project.pk %}" method="post">
+        <form action="{% url 'webapp:project_delete' project.pk %}" method="post">
             {% csrf_token %}
             <input class="btn btn-danger" type="submit" value="Delete"/>
-            <a class="btn btn-primary" href="{% url 'project_list' %}">No</a>
+            <a class="btn btn-primary" href="{% url 'webapp:project_list' %}">No</a>
         </form>
     </div>
 {% endblock %}
