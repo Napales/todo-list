@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
 from django.views.generic import CreateView, UpdateView, DeleteView, DetailView
@@ -5,7 +6,7 @@ from django.views.generic import CreateView, UpdateView, DeleteView, DetailView
 from webapp.forms import TaskForm
 from webapp.models import Task, Project
 
-class CreateTaskView(CreateView):
+class CreateTaskView(LoginRequiredMixin, CreateView):
     form_class = TaskForm
     template_name = 'tasks/task_create.html'
 
@@ -17,7 +18,7 @@ class CreateTaskView(CreateView):
     def get_success_url(self):
         return reverse('webapp:project_detail', kwargs={'pk': self.object.project.pk})
 
-class UpdateTaskView(UpdateView):
+class UpdateTaskView(LoginRequiredMixin, UpdateView):
     model = Task
     form_class = TaskForm
     template_name = 'tasks/task_update.html'
@@ -25,7 +26,7 @@ class UpdateTaskView(UpdateView):
     def get_success_url(self):
         return reverse('webapp:project_detail', kwargs={'pk': self.object.project.pk})
 
-class DeleteTaskView(DeleteView):
+class DeleteTaskView(LoginRequiredMixin, DeleteView):
     model = Task
 
     def get(self, request, *args, **kwargs):
@@ -35,7 +36,7 @@ class DeleteTaskView(DeleteView):
     def get_success_url(self):
         return reverse('webapp:project_detail', kwargs={'pk': self.object.project.pk})
 
-class DetailTaskView(DetailView):
+class DetailTaskView(LoginRequiredMixin, DetailView):
     template_name = 'tasks/task_detail.html'
     model = Task
     context_object_name = 'task'
