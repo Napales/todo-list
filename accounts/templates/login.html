@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {{ next }}
     <h1>Вход</h1>
     <form action="{% url 'accounts:login' %}" method="post" class="text-center">
         {% if next %}

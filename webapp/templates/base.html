@@ -23,7 +23,9 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+
+        {% if user.is_authenticated %}
+            <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 {% block nav %}
                     <li class="nav-item">
@@ -32,26 +34,41 @@
                     </li>
                 {% endblock %}
             </ul>
-            {% if user.is_authenticated %}
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <form action="{% url 'accounts:logout' %}" method="post">
-                            {% csrf_token %}
-                            <button class="nav-link active" type="submit">
-                                Logout <i class="bi bi-box-arrow-left fs-5"></i>
-                            </button>
-                        </form>
-                    </li>
-                </ul>
-            {% else %}
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{% url 'accounts:login' %}">
-                            Login <i class="bi bi-box-arrow-in-right fs-5"></i>
-                        </a>
-                    </li>
-                </ul>
-            {% endif %}
+
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item my-auto ">
+                    {{ user }}
+                </li>
+
+                <span class="mx-2 text-muted mt-2">|</span>
+
+                <li class="nav-item ms-auto">
+                    <form action="{% url 'accounts:logout' %}" method="post">
+                        {% csrf_token %}
+                        <button class="nav-link active" type="submit">
+                            Logout <i class="bi bi-box-arrow-left fs-5"></i>
+                        </button>
+                    </form>
+                </li>
+            </ul>
+        {% else %}
+
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'accounts:login' %}">
+                        Login <i class="bi bi-box-arrow-in-right fs-5"></i>
+                    </a>
+                </li>
+
+                <span class="mx-1 text-muted mt-2">|</span>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="{% url 'accounts:registration' %}">
+                        Registation <i class="bi bi-box-arrow-in-right fs-5"></i>
+                    </a>
+                </li>
+            </ul>
+        {% endif %}
         </div>
     </div>
 </nav>
