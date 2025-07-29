@@ -1,381 +1,426 @@
 [
 {
-  "model": "webapp.status",
-  "pk": 1,
-  "fields": {
-    "name": "New"
-  }
+    "model": "webapp.status",
+    "pk": 1,
+    "fields": {
+        "name": "New"
+    }
 },
 {
-  "model": "webapp.status",
-  "pk": 2,
-  "fields": {
-    "name": "In Progress"
-  }
+    "model": "webapp.status",
+    "pk": 2,
+    "fields": {
+        "name": "In Progress"
+    }
 },
 {
-  "model": "webapp.status",
-  "pk": 3,
-  "fields": {
-    "name": "Done"
-  }
+    "model": "webapp.status",
+    "pk": 3,
+    "fields": {
+        "name": "Done"
+    }
 },
 {
-  "model": "webapp.task",
-  "pk": 20,
-  "fields": {
-    "description": "Сделать ДЗ",
-    "detail_description": "Нужно открыть там и дкдаещ-пепльиеклмевм",
-    "created_at": "2025-07-11T07:47:07.848Z",
-    "updated_at": "2025-07-20T15:57:18.294Z",
-    "status": 1,
-    "project": 1,
-    "type": []
-  }
+    "model": "webapp.task",
+    "pk": 20,
+    "fields": {
+        "description": "Сделать ДЗ",
+        "detail_description": "Нужно открыть там и дкдаещ-пепльиеклмевм",
+        "created_at": "2025-07-11T07:47:07.848Z",
+        "updated_at": "2025-07-20T15:57:18.294Z",
+        "status": 1,
+        "project": 1,
+        "type": []
+    }
 },
 {
-  "model": "webapp.task",
-  "pk": 21,
-  "fields": {
-    "description": "Поесть",
-    "detail_description": "Там та там та каепепеакк",
-    "created_at": "2025-07-11T07:47:32.941Z",
-    "updated_at": "2025-07-20T15:57:18.299Z",
-    "status": 2,
-    "project": 1,
-    "type": []
-  }
+    "model": "webapp.task",
+    "pk": 22,
+    "fields": {
+        "description": "Изменить модель",
+        "detail_description": "Там та там то не работае и нуэно то то то то",
+        "created_at": "2025-07-11T07:47:53.553Z",
+        "updated_at": "2025-07-20T15:57:18.300Z",
+        "status": 1,
+        "project": 1,
+        "type": []
+    }
 },
 {
-  "model": "webapp.task",
-  "pk": 22,
-  "fields": {
-    "description": "Изменить модель",
-    "detail_description": "Там та там то не работае и нуэно то то то то",
-    "created_at": "2025-07-11T07:47:53.553Z",
-    "updated_at": "2025-07-20T15:57:18.300Z",
-    "status": 1,
-    "project": 1,
-    "type": []
-  }
+    "model": "webapp.task",
+    "pk": 23,
+    "fields": {
+        "description": "Тренировка",
+        "detail_description": "сделать тренировку",
+        "created_at": "2025-07-11T07:48:48.974Z",
+        "updated_at": "2025-07-20T15:57:18.304Z",
+        "status": 3,
+        "project": 1,
+        "type": [
+            1,
+            2
+        ]
+    }
 },
 {
-  "model": "webapp.task",
-  "pk": 23,
-  "fields": {
-    "description": "Тренировка",
-    "detail_description": "сделать тренировку",
-    "created_at": "2025-07-11T07:48:48.974Z",
-    "updated_at": "2025-07-20T15:57:18.304Z",
-    "status": 3,
-    "project": 1,
-    "type": [
-      1,
-      2
-    ]
-  }
+    "model": "webapp.task",
+    "pk": 24,
+    "fields": {
+        "description": "Багается при открытие",
+        "detail_description": "там то там то баг",
+        "created_at": "2025-07-11T07:49:03.206Z",
+        "updated_at": "2025-07-20T15:57:18.303Z",
+        "status": 2,
+        "project": 1,
+        "type": [
+            3
+        ]
+    }
 },
 {
-  "model": "webapp.task",
-  "pk": 24,
-  "fields": {
-    "description": "Багается при открытие",
-    "detail_description": "там то там то баг",
-    "created_at": "2025-07-11T07:49:03.206Z",
-    "updated_at": "2025-07-20T15:57:18.303Z",
-    "status": 2,
-    "project": 1,
-    "type": [
-      3
-    ]
-  }
+    "model": "webapp.task",
+    "pk": 25,
+    "fields": {
+        "description": "Сдать работу",
+        "detail_description": "ту работу нужно туда туда сюда отдать",
+        "created_at": "2025-07-11T07:49:26.417Z",
+        "updated_at": "2025-07-20T15:57:18.302Z",
+        "status": 2,
+        "project": 1,
+        "type": [
+            1,
+            2,
+            3
+        ]
+    }
 },
 {
-  "model": "webapp.task",
-  "pk": 25,
-  "fields": {
-    "description": "Сдать работу",
-    "detail_description": "ту работу нужно туда туда сюда отдать",
-    "created_at": "2025-07-11T07:49:26.417Z",
-    "updated_at": "2025-07-20T15:57:18.302Z",
-    "status": 2,
-    "project": 1,
-    "type": [
-      1,
-      2,
-      3
-    ]
-  }
+    "model": "webapp.task",
+    "pk": 26,
+    "fields": {
+        "description": "Исправить вывод",
+        "detail_description": "амамеиепе",
+        "created_at": "2025-07-11T07:49:46.779Z",
+        "updated_at": "2025-07-20T15:57:18.302Z",
+        "status": 3,
+        "project": 1,
+        "type": [
+            3
+        ]
+    }
 },
 {
-  "model": "webapp.task",
-  "pk": 26,
-  "fields": {
-    "description": "Исправить вывод",
-    "detail_description": "амамеиепе",
-    "created_at": "2025-07-11T07:49:46.779Z",
-    "updated_at": "2025-07-20T15:57:18.302Z",
-    "status": 3,
-    "project": 1,
-    "type": [
-      3
-    ]
-  }
+    "model": "webapp.task",
+    "pk": 27,
+    "fields": {
+        "description": "rgrgtgtgfrfgr",
+        "detail_description": "gretgtrvfdffregr",
+        "created_at": "2025-07-11T08:01:15.368Z",
+        "updated_at": "2025-07-20T15:57:18.301Z",
+        "status": 1,
+        "project": 1,
+        "type": [
+            2
+        ]
+    }
 },
 {
-  "model": "webapp.task",
-  "pk": 27,
-  "fields": {
-    "description": "rgrgtgtgfrfgr",
-    "detail_description": "gretgtrvfdffregr",
-    "created_at": "2025-07-11T08:01:15.368Z",
-    "updated_at": "2025-07-20T15:57:18.301Z",
-    "status": 1,
-    "project": 1,
-    "type": [
-      2
-    ]
-  }
+    "model": "webapp.task",
+    "pk": 28,
+    "fields": {
+        "description": "tedt стало такиммпепепепеп",
+        "detail_description": "frrtdevergregrt аалалалалала",
+        "created_at": "2025-07-11T08:05:13.939Z",
+        "updated_at": "2025-07-20T15:57:18.304Z",
+        "status": 2,
+        "project": 1,
+        "type": [
+            1,
+            2
+        ]
+    }
 },
 {
-  "model": "webapp.task",
-  "pk": 28,
-  "fields": {
-    "description": "tedt стало такиммпепепепеп",
-    "detail_description": "frrtdevergregrt аалалалалала",
-    "created_at": "2025-07-11T08:05:13.939Z",
-    "updated_at": "2025-07-20T15:57:18.304Z",
-    "status": 2,
-    "project": 1,
-    "type": [
-      1,
-      2
-    ]
-  }
+    "model": "webapp.task",
+    "pk": 30,
+    "fields": {
+        "description": "123123123123",
+        "detail_description": "123123123123123123",
+        "created_at": "2025-07-15T10:12:07.074Z",
+        "updated_at": "2025-07-20T15:57:18.305Z",
+        "status": 1,
+        "project": 1,
+        "type": [
+            2
+        ]
+    }
 },
 {
-  "model": "webapp.task",
-  "pk": 30,
-  "fields": {
-    "description": "123123123123",
-    "detail_description": "123123123123123123",
-    "created_at": "2025-07-15T10:12:07.074Z",
-    "updated_at": "2025-07-20T15:57:18.305Z",
-    "status": 1,
-    "project": 1,
-    "type": [
-      2
-    ]
-  }
+    "model": "webapp.task",
+    "pk": 31,
+    "fields": {
+        "description": "123123123123",
+        "detail_description": "rtgtbtbrdrrtbdbyd",
+        "created_at": "2025-07-15T10:33:30.770Z",
+        "updated_at": "2025-07-20T15:57:18.306Z",
+        "status": 3,
+        "project": 1,
+        "type": [
+            3,
+            2
+        ]
+    }
 },
 {
-  "model": "webapp.task",
-  "pk": 31,
-  "fields": {
-    "description": "123123123123",
-    "detail_description": "rtgtbtbrdrrtbdbyd",
-    "created_at": "2025-07-15T10:33:30.770Z",
-    "updated_at": "2025-07-20T15:57:18.306Z",
-    "status": 3,
-    "project": 1,
-    "type": [
-      3,
-      2
-    ]
-  }
+    "model": "webapp.task",
+    "pk": 32,
+    "fields": {
+        "description": "lesson",
+        "detail_description": "bgfbtrrtgrgtrh",
+        "created_at": "2025-05-15T10:33:40.865Z",
+        "updated_at": "2025-07-20T15:57:18.305Z",
+        "status": 3,
+        "project": 1,
+        "type": [
+            2,
+            3
+        ]
+    }
 },
 {
-  "model": "webapp.task",
-  "pk": 32,
-  "fields": {
-    "description": "lesson",
-    "detail_description": "bgfbtrrtgrgtrh",
-    "created_at": "2025-05-15T10:33:40.865Z",
-    "updated_at": "2025-07-20T15:57:18.305Z",
-    "status": 3,
-    "project": 1,
-    "type": [
-      2,
-      3
-    ]
-  }
+    "model": "webapp.task",
+    "pk": 33,
+    "fields": {
+        "description": "Тест после",
+        "detail_description": "123123123123123",
+        "created_at": "2025-07-18T06:11:19.918Z",
+        "updated_at": "2025-07-20T15:57:18.306Z",
+        "status": 2,
+        "project": 1,
+        "type": [
+            2,
+            3
+        ]
+    }
 },
 {
-  "model": "webapp.task",
-  "pk": 33,
-  "fields": {
-    "description": "Тест после",
-    "detail_description": "123123123123123",
-    "created_at": "2025-07-18T06:11:19.918Z",
-    "updated_at": "2025-07-20T15:57:18.306Z",
-    "status": 2,
-    "project": 1,
-    "type": [
-      2,
-      3
-    ]
-  }
+    "model": "webapp.task",
+    "pk": 35,
+    "fields": {
+        "description": "12312312312ваакакпкак=)",
+        "detail_description": "цуаукпкекепкерке",
+        "created_at": "2025-07-22T12:02:33.942Z",
+        "updated_at": "2025-07-22T12:25:39.443Z",
+        "status": 2,
+        "project": 2,
+        "type": [
+            1,
+            2
+        ]
+    }
 },
 {
-  "model": "webapp.task",
-  "pk": 35,
-  "fields": {
-    "description": "12312312312ваакакпкак=)",
-    "detail_description": "цуаукпкекепкерке",
-    "created_at": "2025-07-22T12:02:33.942Z",
-    "updated_at": "2025-07-22T12:25:39.443Z",
-    "status": 2,
-    "project": 2,
-    "type": [
-      1,
-      2
-    ]
-  }
+    "model": "webapp.task",
+    "pk": 36,
+    "fields": {
+        "description": "уцвсчавпвтгнаовек",
+        "detail_description": "аыв21323565нер имваер",
+        "created_at": "2025-07-22T12:03:03.037Z",
+        "updated_at": "2025-07-22T12:03:03.037Z",
+        "status": 2,
+        "project": 2,
+        "type": [
+            2
+        ]
+    }
 },
 {
-  "model": "webapp.task",
-  "pk": 36,
-  "fields": {
-    "description": "уцвсчавпвтгнаовек",
-    "detail_description": "аыв21323565нер имваер",
-    "created_at": "2025-07-22T12:03:03.037Z",
-    "updated_at": "2025-07-22T12:03:03.037Z",
-    "status": 2,
-    "project": 2,
-    "type": [
-      2
-    ]
-  }
+    "model": "webapp.task",
+    "pk": 37,
+    "fields": {
+        "description": "123123123123",
+        "detail_description": "3e3wfdaregshdyth54sefvstrhsyh",
+        "created_at": "2025-07-25T08:49:00.134Z",
+        "updated_at": "2025-07-25T08:49:00.134Z",
+        "status": 1,
+        "project": 1,
+        "type": [
+            3
+        ]
+    }
 },
 {
-  "model": "webapp.type",
-  "pk": 1,
-  "fields": {
-    "name": "Task"
-  }
+    "model": "webapp.task",
+    "pk": 38,
+    "fields": {
+        "description": "wsdcvfgndtyh",
+        "detail_description": "tsgtrdshsdthts",
+        "created_at": "2025-07-25T08:49:15.036Z",
+        "updated_at": "2025-07-25T08:49:15.036Z",
+        "status": 2,
+        "project": 6,
+        "type": [
+            2
+        ]
+    }
 },
 {
-  "model": "webapp.type",
-  "pk": 2,
-  "fields": {
-    "name": "Bug"
-  }
+    "model": "webapp.type",
+    "pk": 1,
+    "fields": {
+        "name": "Task"
+    }
 },
 {
-  "model": "webapp.type",
-  "pk": 3,
-  "fields": {
-    "name": "Enhancement"
-  }
+    "model": "webapp.type",
+    "pk": 2,
+    "fields": {
+        "name": "Bug"
+    }
 },
 {
-  "model": "webapp.project",
-  "pk": 1,
-  "fields": {
-    "name": "First project+тест=)",
-    "description": "This is the first project+доп",
-    "start_date": "2029-11-15",
-    "end_date": null
-  }
+    "model": "webapp.type",
+    "pk": 3,
+    "fields": {
+        "name": "Enhancement"
+    }
 },
 {
-  "model": "webapp.project",
-  "pk": 2,
-  "fields": {
-    "name": "sECOND",
-    "description": "12321312321",
-    "start_date": "2025-07-10",
-    "end_date": null
-  }
+    "model": "webapp.project",
+    "pk": 1,
+    "fields": {
+        "name": "First project+тест=)",
+        "description": "This is the first project+доп",
+        "start_date": "2029-11-15",
+        "end_date": null,
+        "user": [
+            1,
+            2,
+            10,
+            11,
+            12
+        ]
+    }
 },
 {
-  "model": "webapp.project",
-  "pk": 4,
-  "fields": {
-    "name": "Close Project",
-    "description": "=(",
-    "start_date": "2025-07-01",
-    "end_date": null
-  }
+    "model": "webapp.project",
+    "pk": 2,
+    "fields": {
+        "name": "sECOND",
+        "description": "12321312321",
+        "start_date": "2025-07-10",
+        "end_date": null,
+        "user": []
+    }
 },
 {
-  "model": "webapp.project",
-  "pk": 5,
-  "fields": {
-    "name": "Old project",
-    "description": "=)",
-    "start_date": "2025-06-05",
-    "end_date": null
-  }
+    "model": "webapp.project",
+    "pk": 4,
+    "fields": {
+        "name": "Close Project",
+        "description": "=(",
+        "start_date": "2025-07-01",
+        "end_date": null,
+        "user": []
+    }
 },
 {
-  "model": "webapp.project",
-  "pk": 6,
-  "fields": {
-    "name": "Project now",
-    "description": "now",
-    "start_date": "2025-07-31",
-    "end_date": null
-  }
+    "model": "webapp.project",
+    "pk": 5,
+    "fields": {
+        "name": "Old project",
+        "description": "=)",
+        "start_date": "2025-06-05",
+        "end_date": null,
+        "user": []
+    }
 },
 {
-  "model": "webapp.project",
-  "pk": 7,
-  "fields": {
-    "name": "Sergo project",
-    "description": "this is project",
-    "start_date": "2025-07-20",
-    "end_date": null
-  }
+    "model": "webapp.project",
+    "pk": 6,
+    "fields": {
+        "name": "Project now",
+        "description": "now",
+        "start_date": "2025-07-31",
+        "end_date": null,
+        "user": []
+    }
 },
 {
-  "model": "webapp.project",
-  "pk": 8,
-  "fields": {
-    "name": "Secret project",
-    "description": "SECRET",
-    "start_date": "2021-07-09",
-    "end_date": null
-  }
+    "model": "webapp.project",
+    "pk": 7,
+    "fields": {
+        "name": "Sergo project",
+        "description": "this is project",
+        "start_date": "2025-07-20",
+        "end_date": null,
+        "user": []
+    }
 },
 {
-  "model": "webapp.project",
-  "pk": 9,
-  "fields": {
-    "name": "test project",
-    "description": "test",
-    "start_date": "2025-07-08",
-    "end_date": "2025-07-24"
-  }
+    "model": "webapp.project",
+    "pk": 8,
+    "fields": {
+        "name": "Secret project",
+        "description": "SECRET",
+        "start_date": "2021-07-09",
+        "end_date": null,
+        "user": []
+    }
 },
 {
-  "model": "webapp.project",
-  "pk": 10,
-  "fields": {
-    "name": "Тестовое",
-    "description": "тутуттуттутуу",
-    "start_date": "2010-01-01",
-    "end_date": "1212-12-12"
-  }
+    "model": "webapp.project",
+    "pk": 9,
+    "fields": {
+        "name": "test project",
+        "description": "test",
+        "start_date": "2025-07-08",
+        "end_date": "2025-07-24",
+        "user": []
+    }
 },
 {
-  "model": "webapp.project",
-  "pk": 11,
-  "fields": {
-    "name": "Тестовое",
-    "description": "тутуттуттутуу",
-    "start_date": "2010-02-23",
-    "end_date": "1212-12-12"
-  }
+    "model": "webapp.project",
+    "pk": 10,
+    "fields": {
+        "name": "Тестовое",
+        "description": "тутуттуттутуу",
+        "start_date": "2010-01-01",
+        "end_date": "1212-12-12",
+        "user": []
+    }
 },
 {
-  "model": "webapp.project",
-  "pk": 12,
-  "fields": {
-    "name": "new test",
-    "description": "nowdorjgjrrfrfr",
-    "start_date": "2025-07-03",
-    "end_date": null
-  }
+    "model": "webapp.project",
+    "pk": 11,
+    "fields": {
+        "name": "Тестовое",
+        "description": "тутуттуттутуу",
+        "start_date": "2010-02-23",
+        "end_date": "1212-12-12",
+        "user": []
+    }
+},
+{
+    "model": "webapp.project",
+    "pk": 12,
+    "fields": {
+        "name": "new test",
+        "description": "nowdorjgjrrfrfr",
+        "start_date": "2025-07-03",
+        "end_date": null,
+        "user": []
+    }
+},
+{
+    "model": "webapp.project",
+    "pk": 16,
+    "fields": {
+        "name": "testq3123",
+        "description": "wedfsdrgtsrgsergtsrhdtrh",
+        "start_date": "2025-08-03",
+        "end_date": null,
+        "user": []
+    }
 }
 ]
