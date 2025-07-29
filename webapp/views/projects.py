@@ -2,11 +2,13 @@ from urllib.parse import urlencode
 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
+from django.shortcuts import redirect
 from django.urls import reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from webapp.forms import SearchForm
 from webapp.forms.projects import ProjectForm
+from webapp.forms.users_project import UsersForm
 from webapp.models import Project
 
 
@@ -72,5 +74,26 @@ class ProjectDeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'projects/project_delete.html'
     model = Project
     success_url = reverse_lazy('webapp:project_list')
+
+
+class UsersProjectUpdateView(LoginRequiredMixin, UpdateView):
+    template_name = 'projects/users_project.html'
+    model = Project
+    form_class = UsersForm
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        if self.object:
+            kwargs['initial'] = {'users': self.object.user.all()}
+        return kwargs
+
+    def form_valid(self, form):
+        project = self.get_object()
+        users = form.cleaned_data.get('users')
+        project.user.set(users)
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse_lazy('webapp:project_detail', kwargs={'pk': self.object.pk})
 
 
