@@ -42,10 +42,10 @@
 
                 <span class="mx-2 text-muted mt-2">|</span>
 
-                <li class="nav-item ms-auto">
+                <li class="nav-item ">
                     <form action="{% url 'accounts:logout' %}" method="post">
                         {% csrf_token %}
-                        <button class="nav-link active" type="submit">
+                        <button class="nav-link active " type="submit">
                             Logout <i class="bi bi-box-arrow-left fs-5"></i>
                         </button>
                     </form>
