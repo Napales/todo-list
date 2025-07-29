@@ -13,6 +13,7 @@
 {% block content %}
     <div class="mt-3">
         <p>Название - {{ project.name }}</p>
+        <p>Автор - {{ project.user }}</p>
         <p>Подробное описание - {{ project.description }}</p>
         <p>Дата начала - {{ project.start_date }}</p>
         {% if project.end_date %}
