@@ -1,6 +1,6 @@
 from urllib.parse import urlencode
 
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMixin
 from django.db.models import Q
 from django.shortcuts import redirect
 from django.urls import reverse_lazy
@@ -48,38 +48,62 @@ class ProjectsListView(ListView):
 
 
 
-class ProjectDetailView(LoginRequiredMixin, DetailView):
+class ProjectDetailView(PermissionRequiredMixin, DetailView):
     template_name = 'projects/project_detail.html'
     model = Project
     context_object_name = 'project'
+    permission_required = 'webapp.view_project'
+
+    def has_permission(self):
+        return super().has_permission() and self.get_object().user.filter(pk=self.request.user.pk).exists()
 
 
-class ProjectCreateView(LoginRequiredMixin, CreateView):
+
+class ProjectCreateView(PermissionRequiredMixin, CreateView):
     template_name = 'projects/project_create.html'
     model = Project
     form_class = ProjectForm
     success_url = reverse_lazy('webapp:project_list')
+    permission_required = 'webapp.add_project'
+
+    def has_permission(self):
+        return super().has_permission()
 
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
 
-class ProjectUpdateView(LoginRequiredMixin, UpdateView):
+class ProjectUpdateView(PermissionRequiredMixin, UpdateView):
     template_name = 'projects/project_update.html'
     form_class = ProjectForm
     model = Project
+    permission_required = 'webapp.change_project'
+
+    def has_permission(self):
+        return super().has_permission() and self.get_object().user.filter(pk=self.request.user.pk).exists()
 
 
-class ProjectDeleteView(LoginRequiredMixin, DeleteView):
+# self.request.user in self.get_object().project.user.all()
+
+
+class ProjectDeleteView(PermissionRequiredMixin, DeleteView):
     template_name = 'projects/project_delete.html'
     model = Project
     success_url = reverse_lazy('webapp:project_list')
+    permission_required = 'webapp.delete_project'
+
+    def has_permission(self):
+        return super().has_permission() and self.get_object().user.filter(pk=self.request.user.pk).exists()
 
 
-class UsersProjectUpdateView(LoginRequiredMixin, UpdateView):
+class UsersProjectUpdateView(PermissionRequiredMixin, UpdateView):
     template_name = 'projects/users_project.html'
     model = Project
     form_class = UsersForm
+    permission_required = 'webapp.change_project'
+
+    def has_permission(self):
+        return super().has_permission() and self.get_object().user.filter(pk=self.request.user.pk).exists()
 
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()

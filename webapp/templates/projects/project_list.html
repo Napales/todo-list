@@ -15,9 +15,17 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ project.name }}</h5>
                         <h6 class="card-subtitle mb-2 text-body-secondary">{{ project.start_date }}</h6>
-                        <a href="{% url 'webapp:project_detail' project.pk %}" class="btn btn-outline-primary">Detail</a>
-                        <a href="{% url 'webapp:project_update' project.pk %}" class="btn btn-outline-success">Update</a>
-                        <a href="{% url 'webapp:project_delete' project.pk %}" class="btn btn-outline-danger">Delete</a>
+                        {% if perms.webapp.view_project %}
+                            <a href="{% url 'webapp:project_detail' project.pk %}" class="btn btn-outline-primary">Detail</a>
+                        {% endif %}
+                        {% if perms.webapp.change_project %}
+                            <a href="{% url 'webapp:project_update' project.pk %}"
+                               class="btn btn-outline-success">Update</a>
+                        {% endif %}
+                        {% if perms.webapp.delete_project %}
+                            <a href="{% url 'webapp:project_delete' project.pk %}"
+                               class="btn btn-outline-danger">Delete</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
